@@ -1,0 +1,13 @@
+<div ng-controller="shipmentListController">
+    <table>
+        <tr>
+            <th>Receiver</th>
+            <th>Sent On</th>
+        </tr>
+        <tr ng-repeat="shipment in shipmentList" border="1">
+            <td><a href="#/shipmentdetails" ng-click="setShipmentId(shipment.shipmentId)">{{shipment.receiver.person.firstName}}&nbsp;{{shipment.receiver.person.lastName}}</a>
+            </td>
+            <td>{{shipment.pickupTime}}</td>
+        </tr>
+    </table>
+</div>
